@@ -1,0 +1,40 @@
+//- carousel in hero section
+#carouselExampleIndicators.carousel.slide(data-ride='carousel')
+  ol.carousel-indicators
+    li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+    li(data-target='#carouselExampleIndicators', data-slide-to='1')
+    li(data-target='#carouselExampleIndicators', data-slide-to='2')
+  .carousel-inner
+    .container
+        .logo
+            img(src="img/logo.png", alt="")
+    .carousel-item.active
+      img.d-block.w-100(src='img/main-bg.jpg', alt='First slide')
+      .carousel-caption.d-none.d-md-block
+        .container.col
+            .main-text My Sport для тех, 
+            .main-text  кто хочет сделать себя 
+            .main-text  и мир лучше
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate distinctio recusandae consequatur minus hic mollitia natus tempora consectetur, minima omnis nam earum illum fugiat, obcaecati sequi facere. Laborum, consectetur cumque!
+            a.btn.btn-c2a(href="") Подробнее
+    .carousel-item
+      img.d-block.w-100(src='img/main-bg.jpg', alt='Second slide')
+      .carousel-caption.d-none.d-md-block
+            .main-text My Sport для тех, 
+            .main-text  кто хочет сделать себя 
+            .main-text  и мир лучше
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate distinctio recusandae consequatur minus hic mollitia natus tempora consectetur, minima omnis nam earum illum fugiat, obcaecati sequi facere. Laborum, consectetur cumque!
+            a.btn.btn-c2a(href="") Подробнее
+    .carousel-item  
+      img.d-block.w-100(src='img/main-bg.jpg', alt='Third slide')
+      .carousel-caption.d-none.d-md-block
+            .main-text My Sport для тех, 
+            .main-text  кто хочет сделать себя 
+            .main-text  и мир лучше
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate distinctio recusandae consequatur minus hic mollitia natus tempora consectetur, minima omnis nam earum illum fugiat, obcaecati sequi facere. Laborum, consectetur cumque!
+            a.btn.btn-c2a(href="") Подробнее
+  a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+    img(src="img/arrow-left.png", alt="")
+  a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+    img(src="img/arrow-right.png", alt="")
+//- en carousel

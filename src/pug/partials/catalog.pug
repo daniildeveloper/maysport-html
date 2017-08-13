@@ -1,0 +1,102 @@
+.catalog__wrapper.container
+
+    //- top select
+    .row.catalog__top__select.justify-content-center
+        .col-md-3
+        .col-md-9
+            ul.nav
+                li.nav-item
+                    a.nav-link(href="#") Биатлон
+                li.nav-item
+                    a.nav-link(href="#") Стрельба
+                li.nav-item
+                    a.nav-link(href="#") Бильярд
+                li.nav-item
+                    a.nav-link(href="#") Теннис
+                li.nav-item
+                    a.nav-link(href="#") Футбол
+                li.nav-item
+                    a.nav-link(href="#") Все
+    //- end top select
+
+    //- catalog itself
+    .catalog.row
+        //- filter sidebar
+        .col-md-3
+            ul.list-group
+                li.list-group-item.list-group-item__header
+                    .header Выберите вид спорта
+                    .border
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Баскетбол
+                li.list-group-item
+                    a(href="category.html") Бокс
+                li.list-group-item
+                    a(href="category.html") Борьба
+                li.list-group-item
+                    a(href="category.html") Биатлон
+                li.list-group-item
+                    a(href="category.html") Бильярд
+                li.list-group-item
+                    a(href="category.html") Воллейбол
+                li.list-group-item
+                    a(href="category.html") Каратэ
+                li.list-group-item
+                    a(href="category.html") Кроссфит
+                li.list-group-item
+                    a(href="category.html") Лыжный спорт
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Гимнастика
+                li.list-group-item
+                    a(href="category.html") Еще
+        //- end filter-sidebar
+
+        //- catalog items
+        .col-md-9.catalog__items
+
+            //- catalog items header
+            .catalog__items__header 
+                h2.text-uppercase Кроссфит
+                .hr.row
+                    .col-sm-6.col-md-2.red
+                    .col-sm-6.col-md-10
+            //- end catalog-items header
+
+            //- catalog items select
+            .catalog__items__select
+                .row.justify-content-between
+                    .col-md-5
+                          .input-group
+                            span.form-control Сортировать
+                            .input-group-btn
+                                button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                    | по популяности
+                                .dropdown-menu.dropdown-menu-right
+                                    a.dropdown-item(href='#') по популяности
+                                    a.dropdown-item(href='#') по цене
+                    .col-md-4
+            //- end catalog items select
+
+            //- catalog row
+            .row
+                each val in [1, 2, 3, 4, 5, 6]
+                        include catalog-single-item.pug
+
+            //- end catalog row
+
+        //- end catalog items 
+    //- end catalog

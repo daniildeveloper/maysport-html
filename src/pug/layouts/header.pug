@@ -1,0 +1,47 @@
+//- navbar
+nav.navbar.navbar-expand-lg.container.navbar-fixed-top
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto.primary-navigation.text-uppercase
+      li.nav-item.active
+        a.nav-link(href='index.html') Главная
+      li.nav-item
+        a.nav-link(href='#') О нас
+      li.nav-item
+        a.nav-link(href='#') Новости
+      li.nav-item
+        a.nav-link(href='blog.html') Блог
+      li.nav-item
+        a.nav-link(href="support.html") Помощь
+    .my-2.my-lg-0.row
+        ul.navbar-nav.mr-auto.signin
+            li.nav-item.login
+                a.nav-link(href='#')
+                    img(src="img/login.png", alt="")
+                    span Войти
+            li.nav-item.register
+                a.nav-link(href='#') Регистрация
+        ul.social-nav.navbar-nav.mr-auto
+            li.nav-item
+                a.nav-link(href="#")
+                    i.fa.fa-vk
+            li.nav-item
+                a.nav-link(href="#")
+                    i.fa.fa-facebook
+            li.nav-item
+                a.nav-link(href="#")
+                    i.fa.fa-odnoklassniki
+            li.nav-item
+                a.nav-link(href="#")
+                    i.fa.fa-twitter
+        ul.language-choose.navbar-nav.mr-auto
+            li.nav-item.dropdown.language
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    img(src="img/rus.jpg", alt="")
+                    | Русский
+                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                    a.dropdown-item(href='#')
+                        img(src="img/rus.jpg", alt="")
+                        | Русский
+//- end navbar

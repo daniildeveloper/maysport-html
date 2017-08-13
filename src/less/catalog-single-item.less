@@ -1,0 +1,51 @@
+.card {
+    margin: 0;
+    margin-bottom: 1rem;
+    border: 1px solid @border-gray;
+    padding: 5px;
+    border-radius: 7px;
+    .card-body {
+        h4.card-title {
+            font-size: 1rem;
+            .roboto-bold;
+            text-transform: uppercase;
+        }
+        p.card-text {
+            color: @text-gray;
+            &.cost {
+                color: @red;
+                position: relative;
+                padding-left: 25px;
+                .roboto-bold;
+                &:before {
+                    content: '';
+                    background: url('../img/price.png') no-repeat;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    left: 0;
+                }
+            }
+        }
+        .card-creds {
+            p {
+                position: relative;
+                &.date {
+                    color: @red;
+                    font-size: 0.7rem;
+                    padding-left: 25px;
+                    font-style: italic;
+                    font-weight: bold;
+                    &::before {
+                        content: '';
+                        background: url('../img/calendar.png') no-repeat;
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

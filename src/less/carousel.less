@@ -1,0 +1,53 @@
+.carousel.slide {
+    ol.carousel-indicators {
+        left: inherit;
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid @white;
+            margin: 0 20px;
+            &.active {
+                background: @white;
+            }
+        }
+    }
+    .carousel-inner {
+        .container {
+            position: relative;
+            .logo {
+                position: absolute;
+                z-index: 999;
+                top: 4.5rem;
+            }
+        }
+        .carousel-item {
+            img {
+                width: 100%;
+            }
+            .carousel-caption {
+                text-align: left;
+                bottom: initial;
+                top: 100px;
+                left: 10%;
+                .main-text {
+                    font-size: 3rem;
+                    .roboto-bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        opacity: 1;
+        padding: 1rem;
+    }
+    .carousel-control-prev{
+        justify-content: flex-start;
+    }
+    .carousel-control-next{
+        justify-content: flex-end;
+    }
+}

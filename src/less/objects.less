@@ -1,0 +1,51 @@
+.objects {
+    margin-top: 2rem;
+    .col-sm,
+    .col-md-4,
+    .col-md-8 {
+        padding: 0;
+    }
+    .object {
+        min-height: 200px;
+        background: url('../img/section1.jpg') no-repeat;
+        background-size: cover;
+        padding: 30px 50px;
+        color: @white;
+        &:hover {
+            background: @red !important;
+        }
+        a.btn.btn-more {
+            padding: 0;
+            img {
+                width: 30px;
+            }
+        }
+        h4 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            .roboto-bold;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        &.trener {
+            background: url('../img/section3.jpg') no-repeat;
+        }
+        &.fitnes {
+            background: url('../img/section4.jpg') no-repeat;
+        }
+        &.sections {
+            background: url('../img/section5.jpg') no-repeat;
+        }
+        &.medical {
+            background: url('../img/section7.jpg') no-repeat;
+        }
+        &.pools {
+            background: url('../img/section6.jpg') no-repeat;
+        }
+        &.sport {
+            background: url('../img/section2.jpg') no-repeat;
+        }
+    }
+}

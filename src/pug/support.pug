@@ -1,0 +1,41 @@
+extends layouts/app.pug
+
+block title
+    | Помощь
+
+block content
+    - var title = "Помощь"
+    include layouts/header-bg.pug
+    include partials/breadcrumb.pug
+
+    .container.section
+        .row
+            //- contact form
+            form(action="", method="post").col-sm-3.sidebar
+                ul.list-group.contact-form
+                    li.list-group-item.list-group-item__header
+                        .header Связаться с нами
+                    li.list-group-item
+                        input.form-control(type="text", placeholder="Ваше Имя")
+                    li.list-group-item
+                        input.form-control(type="email", placeholder="Ваш Email")
+                    li.list-group-item
+                        input.form-control(type="phone", placeholder="Ваш телефон")
+                    li.list-group-item
+                        textarea#message.form-control(name="message", cols="15", rows="3")
+                    li.list-group-item.text-center
+                        button(type="submit").btn.btn-primary Отправить
+            //- end contact form
+
+            //- content for support
+            .col-sm-9
+                #accordion(role="tablist").accordion
+                    - var items = [1, 2, 3, 4, 5]
+
+                    each item in items
+                        .card
+                            .card-header(role="tab", id="heading-" + item)
+                                    a(href="#collapse-" + item, data-toggle="collapse", aria-expanded="true", aria-controls="collapse-" + item).w-100 Collapse
+                            .collapse(role="tabpanel", aria-labelledby="heading-" + item, data-parent="accordion", id="collapse-" + item)
+                                .card-body  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt omnis tempore maxime illo, cumque accusantium laborum sunt nobis possimus minima et debitis, accusamus sit expedita esse autem maiores velit!
+            //- end content support
