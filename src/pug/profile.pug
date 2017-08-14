@@ -61,22 +61,22 @@ block content
                 include partials/page-second-header.pug
 
                 main.container.profile
-                    form(action="").col-sm-10
+                    form(action="").col-sm-8
                         //- name/lastname
                         .row.align-items-center
-                            .col-sm-3
+                            .col-sm-4
                                 label(for="").roboto-bold Имя / Фамилия
-                            .col-sm-auto
+                            .col-sm-4
                                 input.form-control.text-center(type="text", value="Александр",  )
-                            .col-sm-auto
+                            .col-sm-4
                                 input.form-control.text-center(type="text", value="Васькович",  )
                         //- end name/lastname
 
                         //- gender
                         .row.align-items-center
-                            .col-sm-3
+                            .col-sm-4
                                 label(for="").roboto-bold Пол:
-                            .col-sm-auto
+                            .col-sm-4
                                 select#gender(name="gender").form-control
                                     option(value="0") Мужчина
                                     option(value="0") Женщина
@@ -84,7 +84,7 @@ block content
 
                         //- birthday
                         .row.align-items-center
-                            .col-sm-3
+                            .col-sm-4
                                 label(for="").roboto-bold Дата рождения
                             .col-sm-auto
                                 - var months = ['Январь', "Февраль", "Март", "Апрель", "Май"]
@@ -104,6 +104,24 @@ block content
                                     while year < 2017
                                         option(value="#{year}")= year++
                         //- end birthday
+
+                        //- email
+                        .row.align-items-center
+                            .col-sm-4
+                                label(for="").roboto-bold E-Mail
+                            .col-sm
+                                input.form-control.text-center(type="email", value="daniilborowkow@ya.ru")
+                        //- end email
+
+                        //- email
+                        .row.align-items-stretch
+                            .col-sm-4
+                                label(for="").roboto-bold Телефон
+                            .col-sm-4
+                                input.form-control.text-center(type="phone", value="+77718521479")
+                            .col-sm-4
+                                .badge.badge-confirmed Подтверждено
+                        //- end email
 
                         .row.justify-content-center
                             button.btn.btn-primary(type="submit") Зарегистрироваться

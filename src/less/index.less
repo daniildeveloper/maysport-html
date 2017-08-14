@@ -21,6 +21,15 @@
             background: @red;
         }
     }
+    &.btn-success{
+        border: 1px solid @green;
+        color: @green;
+        background: @white;
+        &:hover{
+            color: @white;
+            background: @green;
+        }
+    }
 }
 
 .section {
@@ -245,4 +254,21 @@ input.text-center{
 }
 input[disabled]{
     background: #fff;
+}
+
+.badge{
+    &.badge-confirmed{
+        color: @green;
+        background: @white;
+        height: 100%;
+        font-weight: normal;
+        font-size: 1rem;
+        padding: 8px 15px;
+        width: 100%;
+        border-radius: 25px;
+        border: 1px solid @green;
+        text-transform: uppercase;
+        text-align: left;
+        height: 33px;
+    }
 }
