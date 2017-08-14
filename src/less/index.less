@@ -76,9 +76,10 @@ ol.breadcrumb {
         font-size: 0.9rem;
         text-transform: uppercase;
         font-weight: bold;
-        a{
+        a {
             color: @black;
-            &:before, &:after{
+            &:before,
+            &:after {
                 color: @black;
             }
         }
@@ -190,16 +191,34 @@ ul.pagination {
             color: @black;
             margin: 1px 7px;
             .roboto-bold;
-            &:hover{
+            &:hover {
                 color: @red;
             }
         }
-        &.active{
+        &.active {
             background: @white;
-            a.page-link{
+            a.page-link {
                 background: @white;
                 color: @red;
                 border: 1px solid @icon-gray;
+            }
+        }
+    }
+}
+
+article {
+    ul {
+        list-style-type: none;
+        li {
+            position: relative;
+            padding-left: 25px;
+            &:before {
+                content: '\f111';
+                position: absolute;
+                font-family: 'FontAwesome';
+                color: @red;
+                left: 0;
+                top: 1px;
             }
         }
     }

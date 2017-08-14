@@ -1,0 +1,11 @@
+//- catalog items select
+#catalog
+    .row.justify-content-between.sorter
+        .col-md-2
+            .sort-by
+                label(for="") Сортировать
+                select.form-control#sort(name="sort")
+                    option(value="1") по популярности
+                    option(value="2") по дате
+        .col-md-4
+//- end catalog items select
