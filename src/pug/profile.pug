@@ -53,3 +53,57 @@ block content
                                 div.search
                                     i.fa.fa-search
                     //- end search
+                //- end profile sidebar
+            //- end prodile left column
+
+            .col-sm-9
+                - var header = 'Обязательная информация'
+                include partials/page-second-header.pug
+
+                main.container.profile
+                    form(action="").col-sm-10
+                        //- name/lastname
+                        .row.align-items-center
+                            .col-sm-3
+                                label(for="").roboto-bold Имя / Фамилия
+                            .col-sm-auto
+                                input.form-control.text-center(type="text", value="Александр",  )
+                            .col-sm-auto
+                                input.form-control.text-center(type="text", value="Васькович",  )
+                        //- end name/lastname
+
+                        //- gender
+                        .row.align-items-center
+                            .col-sm-3
+                                label(for="").roboto-bold Пол:
+                            .col-sm-auto
+                                select#gender(name="gender").form-control
+                                    option(value="0") Мужчина
+                                    option(value="0") Женщина
+                        //- end gender
+
+                        //- birthday
+                        .row.align-items-center
+                            .col-sm-3
+                                label(for="").roboto-bold Дата рождения
+                            .col-sm-auto
+                                - var months = ['Январь', "Февраль", "Март", "Апрель", "Май"]
+                                select#gender(name="gender").form-control
+                                    each month in months
+                                        option(value="")= month
+                            
+                            .col-sm-auto
+                                - var day = 1
+                                select#day(name="day").form-control
+                                    while day < 31
+                                        option(value="#{day}")= day++
+
+                            .col-sm-auto
+                                - var year = 1990
+                                select#year(name="year").form-control
+                                    while year < 2017
+                                        option(value="#{year}")= year++
+                        //- end birthday
+
+                        .row.justify-content-center
+                            button.btn.btn-primary(type="submit") Зарегистрироваться
