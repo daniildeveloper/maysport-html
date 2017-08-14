@@ -8,4 +8,13 @@ block content
     - var bs = ['Блог']
 
     include layouts/header-bg.pug
-    include partials/breadcrumb.pug
+    .container
+        include partials/breadcrumb.pug
+
+    //- content
+    .container
+        .row
+            aside.col-sm-3
+                include partials/sidebar.pug
+            main.col-sm-9
+                    h2.text-uppercase Кроссфит
