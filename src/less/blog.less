@@ -1,0 +1,57 @@
+.post {
+    .card-body {
+        .card-creds {
+            margin-top: 0.4rem;
+            .creds {
+                p.date {
+                    font-size: 1rem;
+                    &:before {
+                        top: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+p.author {
+    position: relative;
+    padding-left: 25px;
+    &::before {
+        content: '\f2c0';
+        font-family: 'FontAwesome';
+        color: @icon-gray;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 0;
+    }
+}
+
+p.like {
+    position: relative;
+    padding-left: 25px;
+    &::before {
+        content: '\f004';
+        font-family: 'FontAwesome';
+        color: @red;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 0;
+    }
+}
+
+p.comments {
+    position: relative;
+    padding-left: 25px;
+    &::before {
+        content: '\f0e5';
+        font-family: 'FontAwesome';
+        color: @black;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 0;
+    }
+}

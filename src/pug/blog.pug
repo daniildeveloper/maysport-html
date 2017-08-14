@@ -27,18 +27,19 @@ block content
                             h4.card-title.post__title Заголовок поста
                             .content  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ut tempore debitis hic quibusdam. Cumque ad veritatis asperiores quae vel eaque, repellat recusandae suscipit praesentium a consequatur culpa quisquam quis.
                             //- post creds
-                            .card-creds.row.justify-content-between
-                                .creds.row
-                                    .col-md-auto
-                                        p.date 04.08.2018
-                                    .col-md-auto
-                                        p.autor admin
-                                    .col-md-auto
-                                        p.like 3
-                                    .col-md-auto
-                                        p.comments 4 комментариев
-                                .more
-                                    a.btn.btn-primary(href="#") подробнее
+                            .card-creds.container
+                                .row.justify-content-between
+                                    .creds.row
+                                        .col-md-auto
+                                            p.date 04.08.2018
+                                        .col-md-auto
+                                            p.author admin
+                                        .col-md-auto
+                                            p.like 3
+                                        .col-md-auto
+                                            p.comments 4 комментариев
+                                    .more
+                                        a.btn.btn-primary(href="blog-post.html") подробнее
                             //- end post creds
                 
                 include partials/pagination.pug
