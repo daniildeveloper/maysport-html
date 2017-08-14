@@ -1,7 +1,10 @@
 .interestings__wrapper.section.container
     .row.section__header.justify-content-between
         div.section__header__wrapper
-            h3 Интересные материалы
+            if (interestings)
+                h3= interestings
+            else
+                h3 Интересные материалы
         div
             a.btn.btn-primary(href="#") блог
     .interestings__content.row
