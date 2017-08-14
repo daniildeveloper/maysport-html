@@ -39,6 +39,7 @@
     ul.list-group.archive-sidebar.sidebar-widget
         li.list-group-item.list-group-item__header
             .header Архив публикаций
+            .border
         each i in ["Май 2016", "Март 2016", "Апрель 2016", "Февраль 2016"]
             li.list-group-item 
                 a(href="#").text-uppercase.roboto-bold= i
@@ -48,6 +49,7 @@
     ul.list-group.instagram-sidebar.sidebar-widget
         li.list-group-item.list-group-item__header
             .header Наш инстаграм
+            .border
         li.list-group-item
             .row
                 each item in [1, 2, 3, 4, 5, 6]
@@ -59,6 +61,7 @@
     ul.list-group.tags-sidebar.sidebar-widget
         li.list-group-item.list-group-item__header
             .header Популярные тэги
+            .border
         li.list-group-item
             .row.container
                 each tag in ['fitness', 'eat', 'спорт', "Кроссфит", "бокс", 'gym']
@@ -69,6 +72,7 @@
     ul.list-group.search-sidebar.sidebar-widget
         li.list-group-item.list-group-item__header
             .header Поиск
+            .border
         li.list-group-item.no-border-change 
             .input-group-search
                 input.form-control(type="text", name="search", placeholder="Поиск...")
