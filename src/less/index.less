@@ -175,3 +175,26 @@ ul.list-group {
         }
     }
 }
+
+ul.pagination {
+    border: none;
+    li.page-item {
+        a.page-link {
+            border: none;
+            color: @black;
+            margin: 1px 7px;
+            .roboto-bold;
+            &:hover{
+                color: @red;
+            }
+        }
+        &.active{
+            background: @white;
+            a.page-link{
+                background: @white;
+                color: @red;
+                border: 1px solid @icon-gray;
+            }
+        }
+    }
+}
