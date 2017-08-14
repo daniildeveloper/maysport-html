@@ -1,0 +1,83 @@
+    .sidebar {
+        .sidebar-widget {
+            margin-bottom: 2rem;
+            .list-group-item {
+                img {
+                    width: 100%;
+                }
+                h6 {
+                    .roboto-bold;
+                }
+                p.date {
+                    color: @red;
+                    font-size: 0.9rem;
+                    padding-left: 20px;
+                    font-style: italic;
+                    font-weight: bold;
+                    &::before {
+                        content: '';
+                        background: url('../img/calendar.png') no-repeat;
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        left: 15px;
+                    }
+                }
+            }
+            &.instagram-sidebar {
+                li.list-group-item {
+                    .no-border-change;
+                }
+                img {
+                    margin-bottom: 0.9rem;
+                    &:hover {
+                        border: 2px solid @red;
+                        transform: scale(0.99);
+                        margin-bottom: 0.8rem;
+                    }
+                }
+            }
+            &.tags-sidebar {
+                li.list-group-item {
+                    .no-border-change;
+                    &:hover {
+                        a {
+                            color: @black;
+                        }
+                    }
+                    a.sidebar-tag {
+                        text-transform: uppercase;
+                        margin-top: 10px;
+                        border: 1px solid @white;
+                        padding: 3px 6px;
+                        margin-right: 1px;
+                        &:hover {
+                            color: @red;
+                            border-color: @red;
+                        }
+                    }
+                }
+            }
+            &.search-sidebar {
+                .input-group-search{
+                    position: relative;
+                    .search{
+                        position: absolute;
+                        top: 0.3rem;
+                        right: 1rem;
+                        i.fa{
+                            color: @red;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .no-border-change {
+        &:hover {
+            padding-left: 1.25rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.125) !important;
+        }
+    }

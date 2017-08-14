@@ -1,8 +1,9 @@
-.sidbar
+.sidebar
     //- categories
     ul.list-group.categories-sidebar.sidebar-widget
         li.list-group-item.list-group-item__header
             .header Категории
+            .border
         li.list-group-item 
             a(href="#") Воллейбол
         li.list-group-item 
@@ -23,6 +24,7 @@
     ul.list-group.publications-sidebar.sidebar-widget
         li.list-group-item.list-group-item__header
             .header Похожие публикации
+            .border
         each i in [1, 2, 3, 4]
             li.list-group-item 
                 a.row(href="#")
@@ -58,19 +60,18 @@
         li.list-group-item.list-group-item__header
             .header Популярные тэги
         li.list-group-item
-            .row
+            .row.container
                 each tag in ['fitness', 'eat', 'спорт', "Кроссфит", "бокс", 'gym']
-                    a(href="#").col-sm-auto.text-center.sidebar-tag= tag
+                    a(href="#").col.col-sm-auto.text-center.sidebar-tag= tag
     //- end tags
 
     //- search
-    ul.list-group.tags-sidebar.sidebar-widget
+    ul.list-group.search-sidebar.sidebar-widget
         li.list-group-item.list-group-item__header
             .header Поиск
-        li.list-group-item
-            .input-group
+        li.list-group-item.no-border-change 
+            .input-group-search
                 input.form-control(type="text", name="search", placeholder="Поиск...")
-                .input-group-btn
-                    button.btn.btn-secondary(type='submit', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                        i.fa.fa-search
+                div.search
+                    i.fa.fa-search
     //- end search
