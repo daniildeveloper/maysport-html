@@ -76,6 +76,12 @@ ol.breadcrumb {
         font-size: 0.9rem;
         text-transform: uppercase;
         font-weight: bold;
+        a{
+            color: @black;
+            &:before, &:after{
+                color: @black;
+            }
+        }
         &.active {
             color: @red;
             &:before {

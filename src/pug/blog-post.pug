@@ -1,0 +1,11 @@
+extends layouts/app.pug
+
+block title
+    | Пост в блоге
+
+block content
+    - var title = "Пост в блоге"
+    - var bs = ['Блог']
+
+    include layouts/header-bg.pug
+    include partials/breadcrumb.pug

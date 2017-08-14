@@ -1,6 +1,13 @@
 //- breadcrumb
 .container
     ol.breadcrumb
-        li.breadcrumb-item Главная
+        li.breadcrumb-item
+            a(href="/") Главная
+
+        if bs
+            each b in bs
+                li.breadcrumb-item
+                    a(href="#")= b
+
         li.breadcrumb-item.active= title
     //- end breadcrumbs
