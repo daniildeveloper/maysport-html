@@ -20,7 +20,7 @@ block content
                 - var header = 'Пост в блоге'
                 include partials/page-second-header.pug
 
-                article.container.post.card
+                article.container.post-single.card
                     img.preview.card-img-top(src="img/blog-post-image.jpg", alt="")
                     .card-body
                         .card-creds.container
@@ -45,5 +45,7 @@ block content
                                 li lorem
                                 li lorem
                             include partials/social-share.pug
-                        //- post creds
-                        //- end post creds
+                    //- post creds
+                //- end post creds
+
+                include partials/comments.pug

@@ -1,0 +1,19 @@
+.comments.card
+    - var header = 'Комментарии (323)'
+    
+    include page-second-header.pug
+
+    .comments__wrapper
+        each name in ['Name', 'Another name', 'justin bieber', 'dalai lama', 'faceless', 'queen']
+            .comment.row.align-content-center
+                .col-md-2
+                    img(src="img/no-image.jpg", alt="")
+                .col-sm-10
+                    p.name.text-uppercase= name
+                    p.date 18.02.17
+                    div Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde provident placeat, reiciendis magni temporibus perspiciatis expedita tempora molestiae consequatur, animi corrupti repellendus delectus suscipit explicabo recusandae possimus ea! Beatae, dignissimos.
+        
+        .row.justify-content-center
+            .col-md-auto
+                i.fa.fa-circle
+                span Загрузить все комментарии
