@@ -1,0 +1,32 @@
+extends layouts/app.pug
+
+block title
+    | Мои сообщения
+
+block content
+    - var title = header = 'Мои сообщения'
+    include layouts/header-bg.pug
+    include partials/breadcrumb.pug
+
+    .container
+        .row
+            .col-sm-3
+                include partials/profile-sidebar.pug
+            .col-sm-9
+                include partials/page-second-header.pug
+
+                //- messages
+                - var persons = ['Николай Сергеевич', "Валерий Петрович", "Алина Стадник"]
+                each person in persons
+                    .card.message
+                        .row
+                            .col-sm-3
+                                img.card-img-top(src="img/no-image.jpg", alt="")
+                            .card-body.col-sm-9
+                                h4.card-title= person
+                                p.date 29.01.2017
+                                p.card-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellat, exercitationem accusamus vitae aliquid.
+                                .card-creds
+                                    a.btn.btn-primary(href="#") Ответить
+                
+                //- end messages
