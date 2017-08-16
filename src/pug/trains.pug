@@ -1,0 +1,31 @@
+extends layouts/app.pug
+
+block title
+    | Мои тренировки
+
+block content
+    - var title = header = "Мои тренировки"
+    include layouts/header-bg.pug
+    include partials/breadcrumb.pug
+
+    .container
+        .row
+            .col-sm-3
+                include partials/profile-sidebar.pug
+            .col-sm-9
+                include partials/page-second-header.pug
+
+                //- all trainings
+                .container
+                    .row.trainings
+                        - var trainings = ["Кроссфит", "Баннер", "Йога", "Бокс",  "Велоспрот"]
+                        each training in trainings
+                            a(href="#").col-md-4.col-sm-6.training
+                                .content.text-center
+                                    h4= training
+                                    img.text-center(src="img/arrow-right.png", alt="")
+                        a(href="#").col-md-4.col-sm-6.training.training__more
+                            .content.text-center
+                                h4 добавить тренировку
+                                img(src="img/arrow-right1-active.png", alt="")
+                //- en all trainings

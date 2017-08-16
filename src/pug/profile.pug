@@ -6,54 +6,13 @@ block title
 block content
     - var title = 'Мой профиль'
     - var header = 'Мой профиль'
-    include layouts/header-bg.pug
+    include layouts/header-bg.pug 
     include partials/breadcrumb.pug
 
     .container
         .row
             .col-sm-3
-                .sidebar
-                    ul.list-group.profile-photo.sidebar-widget
-                        li.list-group-item.list-group-item__header
-                            img(src="img/profile-photo.jpg", alt="")
-
-                    //- profile
-                    ul.list-group.profile-sidebar.sidebar-widget
-                        li.list-group-item.list-group-item__header
-                            .header Обо мне
-                            .border
-                        - var items = ['мой профиль', "мои сообщения", "команды", "мои тренировки", "нстройки", "стать тренером", "пригласить друга", "помощь"]
-
-                        each item in items
-                            li.list-group-item 
-                                a(href="#").roboto-bold.text-uppercase= item
-                    //- profile
-
-                    //- favorites
-                    ul.list-group.profile-sidebar.sidebar-widget
-                        li.list-group-item.list-group-item__header
-                            .header Избранное
-                            .border
-                        - var items = ["Фитнес", "йога", "футбол", "баскетбол"]
-
-                        each item in items
-                            li.list-group-item 
-                                a(href="#").roboto-bold.text-uppercase= item
-                    //- end favorites
-
-
-                    //- search
-                    ul.list-group.search-sidebar.sidebar-widget
-                        li.list-group-item.list-group-item__header
-                            .header Поиск
-                            .border
-                        li.list-group-item.no-border-change 
-                            .input-group-search
-                                input.form-control(type="text", name="search", placeholder="Поиск...")
-                                div.search
-                                    i.fa.fa-search
-                    //- end search
-                //- end profile sidebar
+                include partials/profile-sidebar.pug
             //- end prodile left column
 
             .col-sm-9

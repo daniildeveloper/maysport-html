@@ -1,0 +1,40 @@
+.trainings {
+    .training {
+        margin-bottom: 2rem;
+        text-decoration: none;
+        .content {
+            min-height: 200px;
+            background: url('../img/int-post4.jpg') no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-self: center;
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+            color: @white;
+            h4{
+                text-transform: uppercase;
+
+            }
+            &:hover{
+                background: @red;
+            }
+            img{
+                width: 30px;
+                margin: 0 auto;
+            }
+        }
+        &.training__more {
+            .content{
+                background: #fff;
+                color: @black;
+                &:hover{
+                    color: @white;
+                    background: @red;
+                }
+            }
+        }
+    }
+}
