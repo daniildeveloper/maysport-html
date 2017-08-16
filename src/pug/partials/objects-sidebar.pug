@@ -1,0 +1,75 @@
+.sidebar
+    //- search
+    ul.list-group.search-sidebar.sidebar-widget
+        li.list-group-item.list-group-item__header
+            .header Поиск
+            .border
+        li.list-group-item.no-border-change 
+            .input-group-search
+                input.form-control(type="text", name="search", placeholder="Поиск...")
+                div.search
+                    i.fa.fa-search
+    //- end search
+
+    //- profile
+    ul.list-group.profile-sidebar.sidebar-widget
+        li.list-group-item.list-group-item__header
+            .header Категории
+            .border
+        - var items = {'Магазины': '', "мед центры": '', "площадки": ''}
+
+        each item, index in items
+            li.list-group-item 
+                a(href= item).roboto-bold.text-uppercase= index
+    //- profile
+    //- publications
+    ul.list-group.publications-sidebar.sidebar-widget
+        li.list-group-item.list-group-item__header
+            .header Похожие публикации
+            .border
+        each i in [1, 2, 3, 4]
+            li.list-group-item 
+                a.row(href="#")
+                    .col-sm-4
+                        img(src="img/post-thumb3.jpg", alt="")
+                    .col-sm-8
+                        h6.text-uppercase Кардиотренажеры
+                        p.date 28.01.18
+    //- end publications
+
+    //- archive
+    ul.list-group.archive-sidebar.sidebar-widget
+        li.list-group-item.list-group-item__header
+            .header Архив публикаций
+            .border
+        each i in ["Май 2016", "Март 2016", "Апрель 2016", "Февраль 2016"]
+            li.list-group-item 
+                a(href="#").text-uppercase.roboto-bold= i
+    //- end archive
+
+    //- instagram
+    ul.list-group.instagram-sidebar.sidebar-widget
+        li.list-group-item.list-group-item__header
+            .header Наш инстаграм
+            .border
+        li.list-group-item
+            .row
+                each item in [1, 2, 3, 4, 5, 6]
+                    .col-sm-4
+                        img(src="img/post-thumb" + item + ".jpg", alt="")
+    //- end instagram
+
+    //- tags
+    ul.list-group.tags-sidebar.sidebar-widget
+        li.list-group-item.list-group-item__header
+            .header Популярные тэги
+            .border
+        li.list-group-item
+            .row.container
+                each tag in ['fitness', 'eat', 'спорт', "Кроссфит", "бокс", 'gym']
+                    a(href="#").col.col-sm-auto.text-center.sidebar-tag= tag
+    //- end tags
+
+
+//- end objects sidebar
+//- end prodile left column
