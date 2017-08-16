@@ -1,0 +1,76 @@
+extends layouts/app.pug
+
+block title
+    | Объект
+
+block content
+    - var header = title = 'Объект'
+    include layouts/header-bg.pug
+    include partials/breadcrumb.pug
+
+    .container
+        .row
+            .col-md-3
+                include partials/objects-sidebar.pug
+            
+            main.col-md-9
+                - var header = 'Об объекте'
+                include partials/page-second-header.pug
+
+                .container.profile
+                    form(action="").col-sm-8
+                        //- gender
+                        .row.align-items-center
+                            .col-sm-4
+                                label(for="").roboto-bold Тип объекта:
+                            .col-sm-4
+                                select#gender(name="gender").form-control.text-center
+                                    option(value="0") Магазин
+                                    option(value="0") Фитнесс клуб
+                        //- end gender
+
+                        //- name/lastname
+                        .row.align-items-center
+                            .col-sm-4
+                                label(for="").roboto-bold Название объекта
+                            .col-sm-4
+                                input.form-control.text-center(type="text", value="Магазин",  )
+                        //- end name/lastname
+
+
+                        //- email
+                        .row.align-items-center
+                            .col-sm-4
+                                label(for="").roboto-bold Адрес
+                            .col-sm
+                                input.form-control.text-center(type="email", value="ул. Улица, 150а")
+                        //- end email
+
+                        //- email
+                        .row.align-items-center
+                            .col-sm-4
+                                label(for="").roboto-bold Сайт
+                            .col-sm
+                                input.form-control.text-center(type="email", value="site.com")
+                        //- end email
+
+                        //- email
+                        .row.align-items-center
+                            .col-sm-4
+                                label(for="").roboto-bold E-Mail
+                            .col-sm
+                                input.form-control.text-center(type="email", value="daniilborowkow@ya.ru")
+                        //- end email
+
+                        //- email
+                        .row.align-items-stretch
+                            .col-sm-4
+                                label(for="").roboto-bold Телефон
+                            .col-sm-4
+                                input.form-control.text-center(type="phone", value="+77718521479")
+                            .col-sm-4
+                                .badge.badge-confirmed Подтверждено
+                        //- end email
+
+                        .row.justify-content-center
+                            button.btn.btn-primary(type="submit") Зарегистрироваться
