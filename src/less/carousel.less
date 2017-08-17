@@ -20,11 +20,19 @@
                 position: absolute;
                 z-index: 999;
                 top: 4.5rem;
+                @media screen and (max-width: 560px) {
+                    img {
+                        display: none;
+                    }
+                }
             }
         }
         .carousel-item {
             img {
                 width: 100%;
+                @media screen and (max-width: 560px) {
+                    min-height: 300px;
+                }
             }
             .carousel-caption {
                 text-align: left;
@@ -43,11 +51,16 @@
     .carousel-control-next {
         opacity: 1;
         padding: 1rem;
+        @media screen and (max-width: 560px) {
+            img{
+                width: 40px;
+            }
+        }
     }
-    .carousel-control-prev{
+    .carousel-control-prev {
         justify-content: flex-start;
     }
-    .carousel-control-next{
+    .carousel-control-next {
         justify-content: flex-end;
     }
 }
