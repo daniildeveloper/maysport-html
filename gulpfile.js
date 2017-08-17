@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 /**
  * run gulp watch dev server
  */
-gulp.task('default', ['framework-prepare', 'pug', 'img', 'fonts'], function () {
+gulp.task('default', ['framework-prepare', 'pug', 'img', 'fonts', 'js'], function () {
     sync.init({
         server: {
             baseDir: './dist'
@@ -21,6 +21,7 @@ gulp.task('default', ['framework-prepare', 'pug', 'img', 'fonts'], function () {
     gulp.watch('./src/less/**/*less', ['less']);
     gulp.watch('./src/pug/**/*.pug', ['pug']);
     gulp.watch('./src/img/**/*.{svg, jpg, png, gif, jpeg}', ['img']);
+    gulp.watch('./src/js/**/*', ['js']);
 })
 
 /**
