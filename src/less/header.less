@@ -7,6 +7,43 @@ header {
     background: transparent;
     z-index: 9999;
     border-bottom: 1px solid @gray;
+    @media screen and(max-width: 560px) {
+        background: @black;
+    }
+    .register {
+        flex-wrap: wrap;
+        ul.navbar-nav {
+            @media screen and (max-width: 560px) {
+                width: 100%;
+                position: relative;
+                &.social-nav{
+                    li.nav-item{
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        margin-left: 30px;
+                    }
+                }
+                li.nav-item{
+                    padding-left: 25px;
+                }
+                &.signin{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content:flex-start;
+                    li.login{
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+    button.navbar-toggler {
+        border: 1px solid @white;
+        span.navbar-toggler-icon{
+            color: @white;
+            
+        }
+    }
     nav.navbar {
         padding-bottom: 0;
         ul.navbar-nav {
@@ -52,6 +89,8 @@ header {
             }
             &.signin,
             &.social-nav {
+                display: flex;
+                flex-direction: row;
                 li.nav-item {
                     a.nav-link {
                         &:hover {
